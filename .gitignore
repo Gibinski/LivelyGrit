@@ -1,0 +1,10 @@
+# .gitignore
+
+# Ignore IDE files
+.vscode/
+*.pyc
+__pycache__/
+
+# Ignore sensitive files
+secrets.yml
+db.sqlite3
