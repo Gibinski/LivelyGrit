@@ -8,3 +8,19 @@ __pycache__/
 # Ignore sensitive files
 secrets.yml
 db.sqlite3
+
+
+# .gitignore
+secrets.yml
+static/
+media/
+__pycache__/
+*.pyc
+*.db
+*.sqlite3
+*.pyo
+*.pyc
+*.pyd
+*.egg-info/
+dist/
+build/
