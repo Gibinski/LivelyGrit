@@ -1,24 +1,43 @@
 import random
 from django.shortcuts import render
 
+def get_random_motivational_quote():
+    file_path = 'livelygrit_app/static/motivational_texts/motivational_quotes.txt'
+
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+        quote = random.choice(lines).strip()
+
+    return quote
+
+
 def home(request):
-    # specify a path to the files with the motivating sentences
-    bg_file_path = 'motivational_bg.txt'
-    en_file_path = 'motivational_en.txt'
+    # Get a random motivational quote
+    quote = get_random_motivational_quote()
+    return render(request, 'livelygrit_app/home.html', {'quote': quote})
 
-    # open the files and read the sentences
-    with open(bg_file_path, encoding='utf-8') as bg_file:
-        bg_lines = bg_file.readlines()
+def about_us(request):
+    # Get a random motivational quote
+    quote = get_random_motivational_quote()
+    return render(request, 'livelygrit_app/about_us.html', {'quote': quote})
 
-    with open(en_file_path, encoding='utf-8') as en_file:
-        en_lines = en_file.readlines()
+def services(request):
+    # Get a random motivational quote
+    quote = get_random_motivational_quote()
+    return render(request, 'livelygrit_app/services.html', {'quote': quote})
 
-    # choose a random sentence for the current language
-    current_language = request.LANGUAGE_CODE
-    if current_language == 'bg':
-        motivational_line = random.choice(bg_lines).strip()
-    else:
-        motivational_line = random.choice(en_lines).strip()
+def contact(request):
+    # Get a random motivational quote
+    if request.method == 'POST':
+        # Извличане на данните от формата
+        full_name = request.POST.get('full_name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
 
-    # provide the sentence as the template context
-    return render(request, 'livelygrit_app/home.html', {'motivational_line': motivational_line})
+        # Създаване на нов обект ContactMessage и запазване на данните в базата данни
+        ContactMessage.objects.create(full_name=full_name, email=email, message=message)
+
+        # Изпращане на потвърждение (може да се промени съобщението)
+        return HttpResponse('Thank you for your message! We will get back to you soon.')
+
+    return render(request, 'livelygrit_app/contact.html')

@@ -1,0 +1,128 @@
+/* Reset default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #2c3e50;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    color: #8e44ad;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Navigation bar styles */
+  nav {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+  }
+  
+  nav a:hover {
+    background-color: #262626;
+  }
+  
+  /* Motivation section styles */
+  #motivation {
+    background-color: #34495e;
+  }
+  
+  #motivation div {
+    padding: 40px 0;
+  }
+  
+  #motivation p {
+    font-size: 24px;
+    font-style: italic;
+    color: #fff;
+  }
+  
+  /* Contact form styles */
+  form {
+    margin-top: 20px;
+  }
+  
+  form label, form input, form textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form input[type="submit"] {
+    background-color: #2980b9;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #1c689e;
+  }
+  
