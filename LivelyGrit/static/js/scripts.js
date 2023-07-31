@@ -1,7 +1,7 @@
 $(document).ready(function() {
     // Function to load dynamic text from motivational_quotes.txt
     function loadDynamicText() {
-        $.get('/static/motivational_quotes.txt', function(data) {
+        $.get('motivational_quotes.txt', function(data) {
             var quotes = data.split('\n');
             var randomIndex = Math.floor(Math.random() * quotes.length);
             var randomQuote = quotes[randomIndex];
